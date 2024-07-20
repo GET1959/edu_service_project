@@ -1,0 +1,119 @@
+[
+  {
+    "model": "lms.section",
+    "pk": 1,
+    "fields": {
+      "title": "sec_1",
+      "preview": "lms/images/sec_1.png",
+      "description": "desc_for_sec_1"
+    }
+  },
+  {
+    "model": "lms.section",
+    "pk": 2,
+    "fields": {
+      "title": "sec_2",
+      "preview": "lms/images/sec_2.jpg",
+      "description": "desc_for_sec_2"
+    }
+  },
+  {
+    "model": "lms.section",
+    "pk": 3,
+    "fields": {
+      "title": "sec_3",
+      "preview": "lms/images/sec_3.jpg",
+      "description": "desc_for_sec_3"
+    }
+  },
+  {
+    "model": "lms.material",
+    "pk": 1,
+    "fields": {
+      "title": "mat_1_1",
+      "content": "desc_for_mat_1_sec_1",
+      "section": 1,
+      "preview": "lms/images/mat_1_1.jpg"
+    }
+  },
+  {
+    "model": "lms.material",
+    "pk": 2,
+    "fields": {
+      "title": "mat_1_2",
+      "content": "desc_for_mat_2_sec_1",
+      "section": 1,
+      "preview": "lms/images/mat_1_2.jpg"
+    }
+  },
+  {
+    "model": "lms.material",
+    "pk": 3,
+    "fields": {
+      "title": "mat_1_3",
+      "content": "desc_for_mat_3_sec_1",
+      "section": 3,
+      "preview": "lms/images/mat_1_3.jpg"
+    }
+  },
+  {
+    "model": "lms.material",
+    "pk": 4,
+    "fields": {
+      "title": "mat_2_1",
+      "content": "desc_for_mat_1_sec_2",
+      "section": 2,
+      "preview": "lms/images/mat_2_1.jpg"
+    }
+  },
+  {
+    "model": "lms.material",
+    "pk": 5,
+    "fields": {
+      "title": "mat_2_2",
+      "content": "desc_for_mat_2_sec_2",
+      "section": 2,
+      "preview": "lms/images/mat_2_2.png"
+    }
+  },
+  {
+    "model": "lms.material",
+    "pk": 6,
+    "fields": {
+      "title": "mat_2_3",
+      "content": "desc_for_mat_3_sec_2",
+      "section": 2,
+      "preview": "lms/images/mat_2_3.jpg"
+    }
+  },
+  {
+    "model": "lms.material",
+    "pk": 7,
+    "fields": {
+      "title": "mat_3_1",
+      "content": "desc_for_mat_1_sec_3",
+      "section": 3,
+      "preview": "lms/images/mat_3_1.jpg"
+    }
+  },
+  {
+    "model": "lms.material",
+    "pk": 8,
+    "fields": {
+      "title": "mat_3_2",
+      "content": "desc_for_mat_2_sec_3",
+      "section": 3,
+      "preview": "lms/images/mat_3_2.jpeg"
+    }
+  },
+  {
+    "model": "lms.material",
+    "pk": 9,
+    "fields": {
+      "title": "mat_3_3",
+      "content": "desc_for_mat_3_sec_3",
+      "section": 3,
+      "preview": "lms/images/mat_3_3.jpeg"
+    }
+  }
+]
