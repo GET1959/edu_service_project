@@ -17,6 +17,13 @@ class AnswerSerializer(serializers.ModelSerializer):
         fields = ['id', 'answer_text', 'is_right',]
 
 
+class CreateAnswerSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Answer
+        fields = ['id', 'answer_text', 'is_right',]
+
+
 class RandomQuestionSerializer(serializers.ModelSerializer):
 
     answer = AnswerSerializer(many=True, read_only=True)
