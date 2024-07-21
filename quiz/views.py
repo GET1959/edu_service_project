@@ -17,6 +17,7 @@ class Quiz(generics.ListAPIView):
 
 class RandomQuestion(APIView):
     serializer_class = QuestionSerializer
+
     def get(self, request, format=None, **kwargs):
         question = Question.objects.filter(quiz__title=kwargs['topic']).order_by('?')[:1]
         serializer = RandomQuestionSerializer(question, many=True)
