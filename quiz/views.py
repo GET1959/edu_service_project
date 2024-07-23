@@ -46,9 +46,12 @@ class CreateAnswer(APIView):
             is_right=(str(self.request.data.get("answer_text")) == str(right_answer))
         )
 
-        if str(current_answer) == str(right_answer):
-            message = 'Ответ верный'
+        if not current_answer.answer_text:
+            message = 'Вы не ввели ответ. Пожалуйста, введите ответ и повторите попытку.'
+            return Response({'message': message})
         else:
-            message = 'Ответ неверный, попробуйте еще раз'
-
-        return Response({'message': message})
+            if str(current_answer) == str(right_answer):
+                message = 'Ответ верный'
+            else:
+                message = 'Ответ неверный, попробуйте еще раз'
+            return Response({'message': message})

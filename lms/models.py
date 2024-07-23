@@ -30,6 +30,7 @@ class Material(models.Model):
     section = models.ForeignKey(
         Section,
         on_delete=models.SET_NULL,
+        related_name="materials",
         verbose_name="Раздел",
         help_text="Укажите раздел",
         **NULLABLE

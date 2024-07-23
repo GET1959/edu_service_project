@@ -6,7 +6,7 @@ from lms.models import Section, Material
 class SectionSerializer(ModelSerializer):
     class Meta:
         model = Section
-        fields = ("id", "title", "description")
+        fields = ("id", "title", "description", "materials")
 
 
 class MaterialSerializer(ModelSerializer):
