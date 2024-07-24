@@ -12,7 +12,8 @@ class Quiz(generics.ListAPIView):
     serializer_class = QuizSerializer
     queryset = Quizzes.objects.all()
     filter_backends = [DjangoFilterBackend, OrderingFilter]
-    filterset_fields = ('material',)
+    filterset_fields = ('material', 'title')
+    ordering_fields = ('material',)
 
 
 class RandomQuestion(APIView):
