@@ -1,4 +1,6 @@
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets
+from rest_framework.filters import OrderingFilter
 from rest_framework.generics import (CreateAPIView, DestroyAPIView,
                                      ListAPIView, RetrieveAPIView,
                                      UpdateAPIView)
@@ -20,6 +22,9 @@ class MaterialCreateAPIView(CreateAPIView):
 class MaterialListAPIView(ListAPIView):
     queryset = Material.objects.all()
     serializer_class = MaterialSerializer
+    filter_backends = [DjangoFilterBackend, OrderingFilter]
+    filterset_fields = ('section',)
+    ordering_fields = ('section', 'title')
 
 
 class MaterialRetrieveAPIView(RetrieveAPIView):
