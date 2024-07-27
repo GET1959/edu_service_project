@@ -40,7 +40,6 @@ class QuizTestCase(APITestCase):
         url = reverse("quiz:quiz")
         response = self.client.get(url)
         data = response.json()[0]
-        print(data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data.get("title"), self.quiz.title)
 
@@ -48,7 +47,6 @@ class QuizTestCase(APITestCase):
         url = reverse("quiz:question", args=("test_quiz",))
         response = self.client.get(url)
         data = response.json()[0]
-        print(data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data.get("title"), self.question.title)
 
@@ -57,7 +55,6 @@ class QuizTestCase(APITestCase):
         data = {"answer_text": "answer_2"}
         response = self.client.post(url, data)
         data = response.json()#[0]
-        print(data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data.get("message"), "Ответ неверный, попробуйте еще раз")
 
@@ -66,6 +63,5 @@ class QuizTestCase(APITestCase):
         data = {"answer_text": "answer_1"}
         response = self.client.post(url, data)
         data = response.json()#[0]
-        print(data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data.get("message"), "Ответ верный")
